@@ -1,0 +1,147 @@
+
+
+	html { font-size: 62.5%;}
+	body {
+		font-size:1.3em;
+		font-family:Georgia, "Times New Roman", serif;
+	}
+	
+	h1 {
+		font-size:1.84615384615385em;
+		line-height:1em;
+		margin:1em;
+		font-weight:700;
+	}
+	
+	h2 {
+		font-size:1.23076923076923em;
+		line-height:1.5;
+		margin:1.5em;
+		font-weight:700;
+	}
+	
+	h3 {
+		font-size:1.07692307692308em;
+		line-height:1.71428571428571;
+		margin:1.71428571428571em 0;
+		font-weight:700;
+	}
+	
+	h4 {
+		font-size:1em;
+		margin:1.84615384615385em 0;
+		line-height:1;
+		font-weight:700;
+	}
+	
+	.mod.facetedNavigation {
+		margin:1.84615384615385em;
+		line-height:1.84615384615385;
+		font-size:1em;
+	}
+	
+	.facetPanel h3 {
+		float:left;
+		display:inline;
+		margin:0 1em;
+		vertical-align:middle;
+	}
+	
+	.mod.facetedNavigation h4 {
+		float:left;
+		display:inline;
+		margin:6px 0;
+	}
+	
+	.facetPanel {
+		margin-bottom:1.84615384615385em;
+		clear:both;
+	}
+	
+	
+	.ctrl {
+		display:inline-block;
+		text-indent:-9999px;
+		width:16px; height:24px;
+		background-repeat:no-repeat;
+		background-position:0 50%;
+	}
+	
+	.ctrl.toggleOpen { float:left;
+		background-image:url(../../assets/images/icons/cc/black/png/round_plus_icon&16.png);
+		
+	}
+	
+	.ctrl.toggleOpen.open {
+		background-image:url(../../assets/images/icons/cc/black/png/round_minus_icon&16.png);
+	}
+	
+	.ctrl.select {
+		width:auto;
+		height:auto;
+		text-indent:0;
+	}
+	
+	
+	
+	.facetType {
+		clear:both;
+		margin:0 0.92307692307693em;
+		display:none;
+		overflow:auto;
+	}
+	
+	.activeFilters {
+		margin:0.92307692307693em 0;
+		overflow:auto;
+		display:block;
+	}
+	
+	.activeFilters h3 {
+		margin:0;	
+	}
+	
+	.activeFilters h5 {
+		font-weight:700;
+		margin-right:0.92307692307693em;
+	}
+	
+	.filtersList li {
+	
+			margin-right:0.92307692307693em;
+	
+	}
+	
+	.facetHeaderSection {
+		display:block;
+		overflow:auto;
+	}
+	
+	.facetListing {
+		display:none;
+	}
+	
+	.mod.facetedNavigation .mod.quickSearch {
+		margin-left:0.92307692307693em
+	}
+
+	.mod.quickSearch {
+		clear:both;
+	}
+	
+	.ctrl.search {
+		width:auto;
+		height:auto;
+		text-indent:0;
+	}
+	
+	/* presentational */
+	.inline li {
+		display:inline;
+		position:relative;
+		float:left;
+	}
+	
+	.hidden {display: none}
+	
+	
