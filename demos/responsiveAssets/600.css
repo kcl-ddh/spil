@@ -1,0 +1,27 @@
+.wrapper {
+	max-width:600px;
+	width:600px;
+}
+
+.line {
+	display:relative;
+}
+
+.line.contentSection {
+	max-width:600px;
+	width:600px;
+	overflow:hidden;
+}
+
+.secondary {
+	display:block;
+}
+
+
+
+.unit.size4of5 {
+	position:relative;
+	left:0;
+	margin-left:0;
+	top:0;
+}

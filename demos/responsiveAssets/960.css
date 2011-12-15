@@ -1,0 +1,8 @@
+@import url(../../assets/styles/grids.css);
+
+nav.primary {
+	margin-top:30px;
+}
+
+p, nav.secondary { font-size:110%}
+

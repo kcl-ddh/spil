@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Responsive design in SPIL</title>
+		
+		<link rel="stylesheet" href="../assets/styles/base.css" type="text/css" media="screen" />
+		
+		<!-- load resources depending on screen size-->
+		<link rel="stylesheet" href="responsiveAssets/all-devices.css" type="text/css"  media="screen" />
+
+		<!-- max width: 480px -->
+		<link rel="stylesheet" media="screen and (max-device-width: 480px)" href="responsiveAssets/480.css" />
+
+		<!-- max width: 600px -->
+		<link rel="stylesheet" href="responsiveAssets/600.css" type="text/css"  media="screen and (min-width:401px) and (max-width:959px)" />
+
+		<!-- min-width: 959px -->
+		<link rel="stylesheet" href="responsiveAssets/960.css" type="text/css"  media="screen and (min-width:960px)" />
+
+		<script src="../assets/scripts/libs/modernizr-dev.js"></script>
+		
+	</head>
+	
+	<body>
+		
+		<div class="wrapper">
+			<div class="line">
+				<header class="unit size1of2">
+					<h1>Responsive design example</h1>
+				</header>
+				<nav class="unit size1of2 lastUnit primary">
+					<ul class="inline">
+						<li><a class="navLink first" href="responsive.html">Home</a></li>
+						<li><a class="navLink" href="#">About</a></li>
+						<li><a class="navLink last" href="#">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="line contentSection" id="content-section">
+				<div class="unit size1of5">
+					<nav class="secondary local">
+						<ul>
+							<li><a class="navLink first" href="#">Nav item 1</a></li>
+							<li><a class="navLink" href="#">Nav item 2</a></li>
+							<li><a class="navLink last" href="#">Nav item 3</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="unit size4of5 lastUnit">
+					<article class="content">
+						<section>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla auctor, metus sagittis faucibus ornare, orci leo feugiat libero, non fringilla eros leo vel metus. Proin vitae eros at mauris dapibus vehicula. Donec faucibus purus tortor, sit amet scelerisque tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec faucibus, mi ut eleifend tristique, arcu velit faucibus dolor, et pharetra massa tellus et mi. Nam pellentesque sagittis felis vel rutrum. Nulla ullamcorper convallis semper. Nam quis placerat tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet tortor nibh. Pellentesque at lorem at lacus faucibus elementum sed eu risus.</p>
+
+							<p>Quisque fermentum lobortis massa vel blandit. Etiam dui risus, placerat et volutpat nec, gravida a nisi. Praesent sodales venenatis suscipit. Vestibulum ac tempus lectus. Vestibulum lorem libero, pretium ut hendrerit eget, ultricies et purus. Pellentesque volutpat tristique libero, ut adipiscing purus rhoncus vitae. Mauris eros justo, ornare id pharetra quis, accumsan eu diam. Praesent a nisl a metus accumsan consectetur nec ut augue. Fusce at est nec massa porttitor rutrum. Cras nisi urna, lacinia sed ultrices venenatis, sollicitudin in urna. In hac habitasse platea dictumst.</p>
+						</section>
+					</article>
+				</div>
+			</div>
+			
+			<div class="footerSection line" id="footer-section">
+					<section>
+						<p>Footer</p>
+					</section>
+			</div>
+			
+		</div>
+		
+	</body>
+</html>
