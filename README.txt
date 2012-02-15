@@ -1,5 +1,7 @@
-SPIL: Simple Presentation and Interface Library
-===============================================
+spil
+====
+
+An HTML5 "style guide" for rapid prototyping and building web front ends.
 
 Licence:
 
