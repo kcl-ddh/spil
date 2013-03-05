@@ -1,0 +1,181 @@
+/* reset */
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+  
+/*	brian's useful test outliner
+	* {
+		border:1px solid red;   
+	}                   
+*/               
+
+
+/* typography */
+@import "typography", "layout";
+ 
+@mixin hide {
+	text-indent: -99999px;
+	position: relative;
+	display: block;       
+} 
+
+@mixin borderRadius( $number ) {
+	-moz-border-radius: $number;
+	-webkit-border-radius: $number;
+	border-radius: $number;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+    
+
+.headerLogo {
+	/* replaces the logo with a background image */
+	/*@include hide;*/
+	
+	/* useful media queries: */
+	/* mobile 
+	
+		@media screen and (max-width:600px) {
+			margin-top:0;  
+		}
+	*/	  
+	
+	/* tablet
+	
+		@media screen and (orientation: portrait) {
+			margin-top:0
+		}
+	*/
+	
+	/* retina display: portrait devices*/
+	
+	/*
+	
+		@media screen and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+			background-image:url(../images/dmc-logo-retina.png);
+			background-size: contain;
+			background-repeat:no-repeat;
+		} 
+	*/ 
+	
+}
+
+/* top navigation */
+.addShadow {
+	@media screen and (max-width:600px) {
+		box-shadow:-1px 2px 2px rgba(0, 0, 0, 0.5);
+	}
+}
+nav.primary {
+	background-color:#444;
+	display:block;
+	border-bottom:1px solid #000;
+	position: fixed;
+	width:100%;
+	z-index:9999;
+
+	
+	ul li {
+		margin:$baseline/2 $baseline;
+		@include inline;
+		@include smallsize;
+		@include smallmargin;
+		@media screen and (max-width:600px) {
+			display:none;
+		}
+		
+		
+		a {
+			@include textshadow;
+			color:#fff;
+			text-decoration:none;
+		}
+	}
+	
+	.smallNavigation {
+		@include borderRadius( 5px );
+		width:30px;
+		height:30px;
+		padding:4px 0;
+		border:1px solid #000;
+		background-color:#000;
+		padding:0;
+		display:none;
+		overflow:hidden;
+		cursor:pointer; 
+		float:right;
+		margin:$baseline/4;
+			@media screen and (max-width:600px) {
+						display:block;
+			}
+	
+		.icon.bar {
+			width:18px;
+			height:2px !important;
+			overflow:hidden;
+			display:block;
+			text-indent:-9999px;
+			margin:$baseline/6 auto;
+			border-radius:1px 1px 1px 1px;
+			background-image:url(../images/menu-bar.png);
+		
+		}
+	}
+	
+	.showNavigation {
+		
+		@media screen and (max-width:600px) {
+			display:block;
+			float:left;
+			
+			li {
+				display: block;
+				float:none;
+			}
+		}
+		@media screen and (min-width: 601px) {
+			display:block;
+			
+		}
+	}
+}
+		
+
+
+.headerSection {
+	position: relative;
+	padding-top:$baseline*2;
+}
+
+
+
+
+
+.footerSection {
+	border-top:1px dotted #ccc;
+} 
+
+.contentSection {
+	img {
+		width: 100%;
+		max-width:100%; 
+		display:block;
+	}
+}
+
+
+
+

@@ -1,0 +1,116 @@
+/* grids 
+
+	1. Work out your smallest unit size (e.g. based on available image sizes)
+	2. How many units does your design need @ full width (i.e. desktop)?
+	3. What is the maximum width for your design @ full width?
+	
+	Examples based on 1140px
+	
+*/
+
+$maxWidth:	1140px;
+$totalUnits: 12;
+/* e.g. 960 / 12 = 80 */
+$singleUnit: $maxWidth/$totalUnits;
+
+
+@function spanMaker($numUnits) {
+	/* e.g. ( ((80 * 1) / 960 ) * 100) = 8.3333333333333%  */	
+	@return percentage( ($singleUnit*$numUnits) / $maxWidth);
+}
+
+
+.row {
+	clear:both;
+}
+/* grids */
+@media screen and (min-width:769px) and (orientation:landscape) {
+	
+	/* 	adapted from OOCSS grids 
+		"line" becomes "row"
+		"unit" becomes "units"
+		"sizeXofX" becomes "spanX"
+		
+		e.g.
+		
+		<div class="row">
+			<div class="span4 units">4 units</div>
+			<div class="span8 units">8 units</div>
+		</div	
+	*/
+	
+	.row, .lastUnit {
+		overflow:hidden; *overflow:visible;*zoom:1;
+	
+	}
+	
+	.units {
+  		float: left; 
+	}
+	
+	.span1 {
+		width: spanMaker(1);
+	}
+
+	.span2 {
+		width: spanMaker(2);
+	}
+	
+	.span3 {
+		width: spanMaker(3);
+	}
+	
+	.span4 {
+		width: spanMaker(4);
+	}
+	
+	.span5 {
+		width: spanMaker(5);
+	}
+	
+	.span6 {
+		width: spanMaker(6);
+	}
+	
+	.span7 {
+		width: spanMaker(7);
+	}
+	
+	.span8 {
+		width: spanMaker(8);
+	}
+	
+	.span9 {
+		width: spanMaker(9);
+	}
+	
+	.span10 {
+		width: spanMaker(10);
+	}
+	
+	.span11 {
+		width: spanMaker(11);
+	}
+	
+	.span12 {
+		width: spanMaker(12);
+	}
+	
+	.lastUnit{float:none;width:auto;_position:relative;_left:-3px;_margin-right:-3px;}
+}
+
+
+/* tablet landscape and up*/
+@media screen and (min-width:769px) {
+	.wrapper {
+		margin:0 auto;
+		max-width: $maxWidth;
+	}
+}
+
+/* mobile */
+@media screen and (max-width: 600px) {
+	.wrapper {
+		max-width:600px;
+	}
+}

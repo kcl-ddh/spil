@@ -1,28 +1,14 @@
 $(document).ready( function() {
-
-	// modules
-	
-	// Tabs -- for jQuery tools 
-	if ( $.fn.tabs) {
-		$(".mod.tabs").tabs(".tabPanes > section");
-	};
-	// End tabs
-	
-	// Scrollable -- for jQuery tools
-	if ( $.fn.scrollable) {
-		var scroller = $(".scrollable");
-		var direction;
-		if (scroller.hasClass("horizontal")) {
-			direction = "horizontal";
-			vertical = true;
+	// jQuery stuff goes in here.
+	$(".smallNavigation").click( function() {
+		if ($("#primary-navigation").hasClass("showNavigation")) {
+				$("#primary-navigation").removeClass("showNavigation");
+				$(".primary").removeClass("addShadow");
+				
 		} else {
-			direction = "vertical";
-			vertical = false;
+				$("#primary-navigation").addClass("showNavigation");
+				$(".primary").addClass("addShadow");				
 		}
-		scroller.scrollable({
-			vertical: vertical
-		});
-	};
-	// End scrollable
+	});
 	
 });

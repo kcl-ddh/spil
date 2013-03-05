@@ -1,0 +1,137 @@
+$baseFont:		"Helvetica Neue",Arial,serif;
+$headerFont:	$baseFont;
+
+$baseline:		24px;
+$baseColour:	#333;	
+
+$baseSize:		14px;
+$largeSize:		16px;
+
+
+$smallSize:		12px;
+$smallLarger:	14px;
+
+
+$h1Size:		24px;
+
+$h2Size:		18px;
+$h2Larger:		20px;
+
+
+$h3Size:		16px;
+$h3Larger:		18px;
+
+@mixin inline {
+	display: inline;
+	position: relative;
+	float: left;
+	margin-right: $baseline;
+}
+
+@mixin smallsize {
+	@media screen and (max-width:899px) {
+		font-size: $smallSize;
+	}
+	@media screen and (min-width: 900px) {
+			font-size: $smallLarger;
+	}
+}
+
+@mixin smallmargin {
+	@media screen and (max-width:600px) {
+			margin-left:#{$baseline/2};
+			margin-right:#{$baseline/2};
+	}
+}
+
+@mixin textshadow {
+	text-shadow: 1px 1px 1px #000;
+}
+
+html {
+	font-size: 100%;
+	font-family: $baseFont;
+	color: $baseColour;
+}
+
+h1, h2, h3, h4 {
+	font-family: $headerFont;
+}
+
+h1 {
+	font-size: $h1Size;
+	line-height: $baseline;
+	margin: $baseline;
+	font-weight: 700;
+	@include smallmargin;
+	
+
+	
+}
+
+h2 {
+	font-size: $h2Size;
+	line-height: $baseline;
+	margin: $baseline;
+	font-weight: 700;
+	@media screen and (min-width:900px) {
+		font-size: $h2Larger;
+	}
+	
+	@include smallmargin;
+	
+}
+
+h3 {
+	font-size: $h3Size;
+	line-height: $baseline;
+	margin: $baseline;
+	font-weight: 700;
+	@media screen and (min-width:900px) {
+		font-size: $h3Larger;
+	}	
+	@include smallmargin;
+	
+}
+
+.contentSection, .footerSection {
+	p, ul, blockquote {
+		font-size: $baseSize;
+		line-height: $baseline;
+		margin: $baseline;
+		
+		@media screen and (min-width:900px) {
+			font-size: $largeSize;
+		}
+		
+		@include smallmargin;
+}
+	
+
+	
+	ul {
+		display:block;
+		overflow: auto;
+		
+		li {
+			list-style-type:square;
+			margin-left: $baseline;
+			padding:0;
+		}
+		
+	}
+	
+	ul.inline li {
+		@include inline;
+	}
+	
+	.smallText {
+		@include smallsize;
+	}
+}
+
+
+
+
+
+

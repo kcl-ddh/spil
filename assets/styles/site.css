@@ -1,44 +1,344 @@
+/* reset */
+html {
+  color: #000;
+  background: #FFF; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: text-top; }
+
+sub {
+  vertical-align: text-bottom; }
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit; }
+
+input, textarea, select {
+  *font-size: 100%; }
+
+legend {
+  color: #000; }
+
+/*	brian's useful test outliner
+	* {
+		border:1px solid red;   
+	}                   
+*/
 /* typography */
-@import url(typography.css);
+html {
+  font-size: 100%;
+  font-family: "Helvetica Neue", Arial, serif;
+  color: #333333; }
+
+h1, h2, h3, h4 {
+  font-family: "Helvetica Neue", Arial, serif; }
+
+h1 {
+  font-size: 24px;
+  line-height: 24px;
+  margin: 24px;
+  font-weight: 700; }
+  @media screen and (max-width:600px) {
+    h1 {
+      margin-left: 12px;
+      margin-right: 12px; } }
+
+h2 {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 24px;
+  font-weight: 700; }
+  @media screen and (min-width:900px) {
+    h2 {
+      font-size: 20px; } }
+  @media screen and (max-width:600px) {
+    h2 {
+      margin-left: 12px;
+      margin-right: 12px; } }
+
+h3 {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 24px;
+  font-weight: 700; }
+  @media screen and (min-width:900px) {
+    h3 {
+      font-size: 18px; } }
+  @media screen and (max-width:600px) {
+    h3 {
+      margin-left: 12px;
+      margin-right: 12px; } }
+
+.contentSection p, .contentSection ul, .contentSection blockquote, .footerSection p, .footerSection ul, .footerSection blockquote {
+  font-size: 14px;
+  line-height: 24px;
+  margin: 24px; }
+  @media screen and (min-width:900px) {
+    .contentSection p, .contentSection ul, .contentSection blockquote, .footerSection p, .footerSection ul, .footerSection blockquote {
+      font-size: 16px; } }
+  @media screen and (max-width:600px) {
+    .contentSection p, .contentSection ul, .contentSection blockquote, .footerSection p, .footerSection ul, .footerSection blockquote {
+      margin-left: 12px;
+      margin-right: 12px; } }
+.contentSection ul, .footerSection ul {
+  display: block;
+  overflow: auto; }
+  .contentSection ul li, .footerSection ul li {
+    list-style-type: square;
+    margin-left: 24px;
+    padding: 0; }
+.contentSection ul.inline li, .footerSection ul.inline li {
+  display: inline;
+  position: relative;
+  float: left;
+  margin-right: 24px; }
+@media screen and (max-width:899px) {
+  .contentSection .smallText, .footerSection .smallText {
+    font-size: 12px; } }
+@media screen and (min-width: 900px) {
+  .contentSection .smallText, .footerSection .smallText {
+    font-size: 14px; } }
+
+/* grids 
+
+	1. Work out your smallest unit size (e.g. based on available image sizes)
+	2. How many units does your design need @ full width (i.e. desktop)?
+	3. What is the maximum width for your design @ full width?
+	
+	Examples based on 1140px
+	
+*/
+/* e.g. 960 / 12 = 80 */
+.row {
+  clear: both; }
 
 /* grids */
-@import url(grids.css);
+@media screen and (min-width:769px) and (orientation:landscape) {
+  /* 	adapted from OOCSS grids 
+  	"line" becomes "row"
+  	"unit" becomes "units"
+  	"sizeXofX" becomes "spanX"
+  	
+  	e.g.
+  	
+  	<div class="row">
+  		<div class="span4 units">4 units</div>
+  		<div class="span8 units">8 units</div>
+  	</div	
+  */
+  .row, .lastUnit {
+    overflow: hidden;
+    *overflow: visible;
+    *zoom: 1; }
 
+  .units {
+    float: left; }
 
-/* modules */
-@import url(mod.css);
+  .span1 {
+    width: 8.33333333333333%; }
 
+  .span2 {
+    width: 16.6666666666667%; }
 
-/* presentational classes */
+  .span3 {
+    width: 25%; }
 
-.inline li {
-	display:inline;
-	position: relative;
-}
+  .span4 {
+    width: 33.3333333333333%; }
 
-.hidden {
-	text-indent:-9999px;
-	position:absolute;
-}
+  .span5 {
+    width: 41.6666666666667%; }
 
-/* clearfix */
+  .span6 {
+    width: 50%; }
+
+  .span7 {
+    width: 58.3333333333333%; }
+
+  .span8 {
+    width: 66.6666666666667%; }
+
+  .span9 {
+    width: 75%; }
+
+  .span10 {
+    width: 83.3333333333333%; }
+
+  .span11 {
+    width: 91.6666666666667%; }
+
+  .span12 {
+    width: 100%; }
+
+  .lastUnit {
+    float: none;
+    width: auto;
+    _position: relative;
+    _left: -3px;
+    _margin-right: -3px; } }
+/* tablet landscape and up*/
+@media screen and (min-width:769px) {
+  .wrapper {
+    margin: 0 auto;
+    max-width: 1140px; } }
+/* mobile */
+@media screen and (max-width: 600px) {
+  .wrapper {
+    max-width: 600px; } }
 .clearfix:after {
-	content: ".";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
-}
- 
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
 .clearfix {
-	display: inline-block;
-}
- 
+  display: inline-block; }
+
 html[xmlns] .clearfix {
-	display: block;
-}
+  display: block; }
 
-/* end presentational classes */
+.headerLogo {
+  /* replaces the logo with a background image */
+  /*@include hide;*/
+  /* useful media queries: */
+  /* mobile 
+  
+  	@media screen and (max-width:600px) {
+  		margin-top:0;  
+  	}
+  */
+  /* tablet
+  
+  	@media screen and (orientation: portrait) {
+  		margin-top:0
+  	}
+  */
+  /* retina display: portrait devices*/
+  /*
+  
+  	@media screen and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  		background-image:url(../images/dmc-logo-retina.png);
+  		background-size: contain;
+  		background-repeat:no-repeat;
+  	} 
+  */ }
 
-/* Site specific styles start here */
+/* top navigation */
+@media screen and (max-width:600px) {
+  .addShadow {
+    box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.5); } }
+
+nav.primary {
+  background-color: #444;
+  display: block;
+  border-bottom: 1px solid #000;
+  position: fixed;
+  width: 100%;
+  z-index: 9999; }
+  nav.primary ul li {
+    margin: 12px 24px;
+    display: inline;
+    position: relative;
+    float: left;
+    margin-right: 24px; }
+    @media screen and (max-width:899px) {
+      nav.primary ul li {
+        font-size: 12px; } }
+    @media screen and (min-width: 900px) {
+      nav.primary ul li {
+        font-size: 14px; } }
+    @media screen and (max-width:600px) {
+      nav.primary ul li {
+        margin-left: 12px;
+        margin-right: 12px; } }
+    @media screen and (max-width:600px) {
+      nav.primary ul li {
+        display: none; } }
+    nav.primary ul li a {
+      text-shadow: 1px 1px 1px #000;
+      color: #fff;
+      text-decoration: none; }
+  nav.primary .smallNavigation {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    padding: 4px 0;
+    border: 1px solid #000;
+    background-color: #000;
+    padding: 0;
+    display: none;
+    overflow: hidden;
+    cursor: pointer;
+    float: right;
+    margin: 6px; }
+    @media screen and (max-width:600px) {
+      nav.primary .smallNavigation {
+        display: block; } }
+    nav.primary .smallNavigation .icon.bar {
+      width: 18px;
+      height: 2px !important;
+      overflow: hidden;
+      display: block;
+      text-indent: -9999px;
+      margin: 4px auto;
+      border-radius: 1px 1px 1px 1px;
+      background-image: url(../images/menu-bar.png); }
+  @media screen and (max-width:600px) {
+    nav.primary .showNavigation {
+      display: block;
+      float: left; }
+      nav.primary .showNavigation li {
+        display: block;
+        float: none; } }
+  @media screen and (min-width: 601px) {
+    nav.primary .showNavigation {
+      display: block; } }
+
+.headerSection {
+  position: relative;
+  padding-top: 48px; }
+
+.footerSection {
+  border-top: 1px dotted #ccc; }
+
+.contentSection img {
+  width: 100%;
+  max-width: 100%;
+  display: block; }
